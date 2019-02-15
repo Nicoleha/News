@@ -13,7 +13,7 @@ class ArticleTest(unittest.TestCase):
         self.new_article=Article("Nicole","WSJ Wealth Adviser Briefing","Brief price gaps in equity trades cost investors about $2 billion a year","http://m.wsj.net/video/20190214/021419seibjoebiden/021419seibjoebiden_1280x720.jpg","https://www.wsj.com/video/waiting-for-biden-why-the-2020-field-is-incomplete-until-he-decides/688A19B5-161D-4FA6-8315-9C025298B3D5.html")
 
     def test_article(self):
-        self.assertTrue(isinstance(self.new_source,Source))
+        self.assertTrue(isinstance(self.new_article,Article))
 
 if __name__ == '__main__':
     unittest.main()

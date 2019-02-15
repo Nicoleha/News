@@ -1,6 +1,7 @@
 from app import app
 import urllib.request,json
 from .models import source
+from .models import article
 Source=source.Source
 
 api_key=app.config['SOURCE_API_KEY']
@@ -19,9 +20,9 @@ def get_source(source):
 
         source_results= None
 
-        if get_movies_response ['results']:
-            source_results_list=get_source_response['results']
-            source_results= process_results[source_results_list]
+        if get_source_response ['articles']:
+            source_results_list=get_source_response['articles']
+            source_results= process_results(source_results_list)
 
             return source_results
 
@@ -33,14 +34,14 @@ def process_results(source_list):
         source_list: A list of dictionaries that contain source details
 
     Returns :
-        source_results: A list of movie objects
+        source_results: A list of source objects
     '''
     source_results=[]
     for source_item in source_list:
         id=source_item.get('id')
         name=source_item.get('name')
 
-    if  urlToImage:
+    if  id:
         source_Object = Source(id,name)
         source_results.append(source_Object)  
 
