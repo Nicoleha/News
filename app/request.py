@@ -39,3 +39,9 @@ def process_results(source_list):
     for source_item in source_list:
         id=source_item.get('id')
         name=source_item.get('name')
+
+    if  urlToImage:
+        source_Object = Source(id,name)
+        source_results.append(source_Object)  
+
+    return source_results    
