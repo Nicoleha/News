@@ -7,10 +7,10 @@ def index():
     '''
     view root page function that returns the index page and its data
     '''
-    wall_street=get_source("The Wall Street Journal")
-    print(source)
+    Bitcoin=get_source("bitcoin")
+    Business=get_source("business")
     title='News Highlight Website'
-    return render_template('index.html',title=title,source=wall_street)
+    return render_template('index.html',title=title,bitcoin=Bitcoin,business=Business)
 
 @app.route('/article/<int:source_id>')
 def article(source_id):
