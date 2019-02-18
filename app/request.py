@@ -3,6 +3,7 @@ import urllib.request,json
 from .models import source
 from .models import article
 Source=source.Source
+Article=article.Article
 
 api_key=app.config['SOURCE_API_KEY']
 
@@ -20,11 +21,11 @@ def get_source(source):
 
         source_results= None
 
-        if get_source_response ['articles']:
-            source_results_list=get_source_response['articles']
+        if get_source_response ['sources']:
+            source_results_list=get_source_response['sources']
             source_results= process_results(source_results_list)
 
-            return source_results
+    return source_results
 
 def process_results(source_list):
     '''            

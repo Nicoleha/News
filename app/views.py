@@ -12,8 +12,8 @@ def index():
     title='News Highlight Website'
     return render_template('index.html',title=title,source=wall_street)
 
-@app.route('/source/<int:source_id>')
-def source(source_id):
+@app.route('/article/<int:source_id>')
+def article(source_id):
     '''
     View source page function that returns the movie details page and its data
     '''
