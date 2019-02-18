@@ -1,23 +1,24 @@
-<h1>love</h1>
+
 {% extends 'base.html'%}
 <!-- Content block -->
 {% block content %}
 <div class="container">
-
     <!-- Poster background -->
     <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background: url({{article.urlToImage}}) no-repeat center center">
+        {% for article in articles %}
+        <div class="col-md-6" style="background: url({{article.urlToImage}})">
         </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
-            <p>article.name</p>
+        <div class="col-md-6">
+            <p>{{ article.name }}</p>
             <h3>{{ article.title }}</h3>
 
             <p> {{ article.description }}</p>
-            <p>{{article.author}}</p>
+            <p>{{ article.author }}</p>
 
 
         </div>
+        {% endfor %}
     </div>
 
 </div>

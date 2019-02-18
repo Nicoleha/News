@@ -58,7 +58,7 @@ def get_article(id):
     '''
     function that gets json request to the url
     '''
-    get_article_url = article.url.format(id,api_key)
+    get_article_url = article_url.format(id,api_key)
 
     with urllib.request.urlopen(get_article_url)as url:
         get_article_data=url.read()
@@ -72,7 +72,7 @@ def get_article(id):
 
     return article_results        
 
-    def process_results(article_list):
+    def process_result(article_list):
         '''
         Function  that processes the article result and transform them to a list of Objects
 

@@ -3,7 +3,7 @@
 
 #### By **NICOLE H.**
 ## Description
-News Highlight is a web application that helps busy people to catch up on the latest news.The website has the home page, that has a list of all sources of news sorted in categories. A user will have to click on Read More on a specific source to view artciles on the site Click here to see the live site
+News Highlight is a web application that helps busy people to catch up on the latest news.The website has the home page, that has a list of all sources of news sorted in categories. A user will have to click on Read Article on a specific source to view artciles. When the user gets to the article he/she can be able to get on the live site of that particular article.
 ## Installation Requirements
 * Clone this repository to your local computer.
 * Ensure you have python3.6 installed in your computer.
@@ -34,14 +34,6 @@ user exit the app immediately
 user chooses any short code, example: cp
 ##### Output
 the user is directed to do what the short code executes, example:cp -create password
-
-#### Other behaviors(short codes):
-* cp : create a new password
-* dp : display created password
-* fp : find a password
-* delp : to delete password
-* gp : generate password
-* ex : exit app
 
 ### Bugs
 Since there is no database to support the app, once you exit or log out of a session you loose all the credentials and created user. You have to create a new user for every session. You can still use the default login but if you exit the app, you will still loose all the credentials you created.
