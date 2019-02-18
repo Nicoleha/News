@@ -1,9 +1,9 @@
 # Password Locker
-#### The password Locker is an application designed to help the user generate and store passwords that he/she uses regulary, February 10th 2019
+#### News Highlight is a web application that helps busy people to catch up on the latest news, February 18th 2019
 
 #### By **NICOLE H.**
 ## Description
-The password locker is an app that help the user generate and store passwords that he/she uses regulary. The user can either create password on his own or generate it. The user can also delete a password of his choice all display them but first he/she has to log in to the app.
+News Highlight is a web application that helps busy people to catch up on the latest news.The website has the home page, that has a list of all sources of news sorted in categories. A user will have to click on Read More on a specific source to view artciles on the site Click here to see the live site
 ## Installation Requirements
 * Clone this repository to your local computer.
 * Ensure you have python3.6 installed in your computer.
