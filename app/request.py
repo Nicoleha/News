@@ -67,42 +67,42 @@ def get_article(id):
         article_object= None
 
         if article_details_response:
-            id = movie_details_response.get('id')
-            title = movie_details_response.get('original_title')
-            overview = movie_details_response.get('overview')
-            poster = movie_details_response.get('poster_path')
-            vote_average = movie_details_response.get('vote_average')
-            vote_count = movie_details_response.get('vote_count')
+            id = article_details_response.get('id')
+            title = article_details_response.get('title')
+            author = article_details_response.get('author')
+            url = article_details_response.get('url')
+            urlToImage = article_details_response.get('urlToImage')
+            content = article_details_response.get('content')
 
-            movie_object = Movie(id,title,overview,poster,vote_average,vote_count)
+            article_object = Article(id,title,overview,poster,vote_average,vote_count)
 
-    return article_results        
+    return article_object       
 
-    def process_results(article_list):
-        '''
-        Function  that processes the article result and transform them to a list of Objects
+    # def process_results(article_list):
+    #     '''
+    #     Function  that processes the article result and transform them to a list of Objects
 
-        Args:
-        article_list: A list of dictionaries that contain article details
+    #     Args:
+    #     article_list: A list of dictionaries that contain article details
 
-        Returns :
-        article_results: A list of article objects
-        '''
+    #     Returns :
+    #     article_results: A list of article objects
+    #     '''
 
-        article_results=[]
-        for article in article_list:
-            author=article.get('author')
-            title=article.get('title')
-            description=article.get('description')
-            url=article.get('url')
-            urlToImage=article.get('urlToImage')
-            publishedAt=article.get('publishedAt')
-            content=article.get('content')
+    #     article_results=[]
+    #     for article in article_list:
+    #         author=article.get('author')
+    #         title=article.get('title')
+    #         description=article.get('description')
+    #         url=article.get('url')
+    #         urlToImage=article.get('urlToImage')
+    #         publishedAt=article.get('publishedAt')
+    #         content=article.get('content')
             
-            if  title:
-                article_Object = Article(author,title,description,url,urlToImage,publishedAt,content)
-                article_results.append(article_Object)  
+    #         if  title:
+    #             article_Object = Article(author,title,description,url,urlToImage,publishedAt,content)
+    #             article_results.append(article_Object)  
 
-    return article_results 
+    # return article_results 
 
         
