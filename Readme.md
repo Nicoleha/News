@@ -15,28 +15,8 @@ For now the project is only viewable in the terminal!
 ## App Specifications
 ### (SPECs)The following is what my program should handle:
 
-#### Example Intput : 
-user enters first and last name
- ##### Output:
- user enters app but has to login
 
-#### Example Input : 
-user inputs password and confirms it correctly
-#####  Output:
-user is now in the app and can start to create or generate password
 
-#### Example Input:
-user inputs password and confirms it wrongly
-##### Output
-user exit the app immediately
-
-#### Example Input:
-user chooses any short code, example: cp
-##### Output
-the user is directed to do what the short code executes, example:cp -create password
-
-### Bugs
-Since there is no database to support the app, once you exit or log out of a session you loose all the credentials and created user. You have to create a new user for every session. You can still use the default login but if you exit the app, you will still loose all the credentials you created.
 ## Technologies Used
 * Python
 * Git Hub

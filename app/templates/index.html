@@ -21,7 +21,7 @@
     </head>
     <body>
         {% block content %}
-        <h1> General</h3>
+        <!-- <h1> General</h3>
         
             {{ macro.displaySourceList(general)}}
         
@@ -42,7 +42,54 @@
    <h1>Technology</h3>
    
     {{ macro.displaySourceList(technology)}}
-   
+    -->
+    <div class="container">
+            <div class="row" id="top">
+                <div class="col-md-12 heading">
+                    <h1>News Highlights</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>General News</h2>
+                    <br>
+                </div>
+                {{macro.displaySourceList(general)}}
+            </div>
+            <hr>
+            <div class="row" id="business">
+                <div class="col-md-12">
+                    <h2 >Business News</h2>
+                    <br>
+                </div>
+                {{macro.displaySourceList(business)}}
+            </div>
+            <hr>
+            <div class="row" id="entertainment">
+                <div class="col-md-12">
+                    <h2>Entertainment News</h2>
+                    <br>
+                </div>
+                {{macro.displaySourceList(entertainment)}}
+            </div>
+            <hr>
+            <div class="row" id="sports">
+                <div class="col-md-12">
+                    <h2>Sports News</h2>
+                    <br>
+                </div>
+                {{macro.displaySourceList(sports)}}
+            </div>
+            <hr>
+            <div class="row" id="tech">
+                <div class="col-md-12">
+                    <h2>Technology News</h2>
+                    <br>
+                </div>
+                {{macro.displaySourceList(technology)}}
+            </div>
+    </div>
 {% endblock%}
     </body>
 </html>

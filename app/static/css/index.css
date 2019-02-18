@@ -1,2 +1,28 @@
 body {background-color: black;
-color:white;}
+color:white;
+font-family: 'Courier New', Courier, monospace;}
+
+.heading {
+    text-align: center;
+    font-family: 'Allura';
+    background-color: #222;
+}
+
+h1 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-size: 70px;
+    word-wrap: break-word;
+    color: white
+}
+
+h2 {
+    color:red;
+}
+
+p{
+    word-wrap: break-word;
+}
+.heading #search{
+    margin-top: 25rem;
+}
