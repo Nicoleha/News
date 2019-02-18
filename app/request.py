@@ -64,11 +64,17 @@ def get_article(id):
         get_article_data=url.read()
         get_article_response=json.loads(get_article_data)
 
-        article_results= None
+        article_object= None
 
-        if get_article_response['articles']:
-            article_results_list = get_article_response['articles']
-            article_results = process_results(article_results_list)
+        if article_details_response:
+            id = movie_details_response.get('id')
+            title = movie_details_response.get('original_title')
+            overview = movie_details_response.get('overview')
+            poster = movie_details_response.get('poster_path')
+            vote_average = movie_details_response.get('vote_average')
+            vote_count = movie_details_response.get('vote_count')
+
+            movie_object = Movie(id,title,overview,poster,vote_average,vote_count)
 
     return article_results        
 
