@@ -21,7 +21,7 @@ def article(article_id):
     '''
     View source page function that returns the article details page and its data
     '''
-    article=get_article('article_id')
+    article=get_article(article_id)
     title=f'{article.title}'
 
     return render_template('article.html',article = article,title=title )
