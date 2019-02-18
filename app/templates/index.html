@@ -14,19 +14,28 @@
     </head>
     <body>
         {% block content %}
-        <h3> General</h3>
-        <ul>
-            {{ macro.displaySourceList(General_cat)}}
-        </ul>
-        <h3> </h3>
-        <ul>
-            {{ macro.displaySourceList(Business_cat)}}
-        </ul>
-        <h3> </h3>
-        <ul>
-            {{ macro.displaySourceList(Entertainment_cat)}}
-        </ul>
+        <h1> General</h3>
+        
+            {{ macro.displaySourceList(general)}}
+        
+        <h1>Business</h3>
+        
+            {{ macro.displaySourceList(business)}}
+        
+        <h1>Entertainment</h3>
+        
+            {{ macro.displaySourceList(entertainment)}}
+        
 
+    <h1>Sports</h3>
+    
+        {{ macro.displaySourceList(sports)}}
+    
+
+   <h1>Technology</h3>
+   
+    {{ macro.displaySourceList(technology)}}
+   
 {% endblock%}
     </body>
 </html>
