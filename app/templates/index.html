@@ -1,3 +1,6 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
 <h1>hey,I am Nicole h</h1>
 <!DOCTYPE html>
 <html>
@@ -10,12 +13,20 @@
         {% endif %}
     </head>
     <body>
+        {% block content %}
+        <h3> General</h3>
+        <ul>
+            {{ macro.displaySourceList(General_cat)}}
+        </ul>
+        <h3> </h3>
+        <ul>
+            {{ macro.displaySourceList(Business_cat)}}
+        </ul>
+        <h3> </h3>
+        <ul>
+            {{ macro.displaySourceList(Entertainment_cat)}}
+        </ul>
 
- 
- <ul>
-    {% for source in source %}
-        <li>{{ source.title}}</li>
-    {% endfor %}
-</ul>
+{% endblock%}
     </body>
 </html>

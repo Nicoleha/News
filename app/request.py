@@ -45,9 +45,10 @@ def process_results(source_list):
     for source in source_list:
         id=source.get('id')
         name=source.get('name')
+        description=source.get('description')
 
     if  id:
-        source_Object = Source(id,name)
+        source_Object = Source(id,name,description)
         source_results.append(source_Object)  
 
     return source_results    

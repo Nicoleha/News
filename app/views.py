@@ -7,15 +7,19 @@ def index():
     '''
     view root page function that returns the index page and its data
     '''
-    Bitcoin=get_source("bitcoin")
-    Business=get_source("business")
-    title='News Highlight Website'
-    return render_template('index.html',title=title,bitcoin=Bitcoin,business=Business)
+    General_cat=get_source("general")
+    Business_cat=get_source("business")
+    Sports_cat=get_source("sports")
+    Entertainment_cat=get_source("entertainment")
+    Technology_cat=get_source("technology")
 
-@app.route('/article/<int:source_id>')
-def article(source_id):
+    title='News Highlight Website'
+    return render_template('index.html',title=title,general=General_cat,business=Business_cat,sports=Sports,entertainment=Entertainment_cat,technology=Technology_cat)
+
+@app.route('/article/<int:article_id>')
+def article(article_id):
     '''
-    View source page function that returns the movie details page and its data
+    View source page function that returns the article details page and its data
     '''
-    return render_template('source.html',id = source_id )
+    return render_template('article.html',id = article_id )
 
