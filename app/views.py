@@ -16,12 +16,12 @@ def index():
     title='News Highlight Website'
     return render_template('index.html',title=title,general=General_cat,business=Business_cat,sports=Sports_cat,entertainment=Entertainment_cat,technology=Technology_cat)
 
-@app.route('/article/<int:article_id>')
-def article(article_id):
+@app.route('/article/<int:id>')
+def article(id):
     '''
     View source page function that returns the article details page and its data
     '''
-    article=get_article(article_id)
+    article=get_article(id)
     title=f'{article.title}'
 
     return render_template('article.html',article = article,title=title )
