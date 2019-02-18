@@ -8,7 +8,7 @@ Article=article.Article
 api_key=app.config['SOURCE_API_KEY']
 
 base_url=app.config['SOURCE_API_BASE_URL']
-base1_url=app.config['ARTICLE_API_BASE_URL']
+article_url=app.config['ARTICLE_API_BASE_URL']
 
 def get_source(category):
     '''
@@ -58,7 +58,7 @@ def get_article(id):
     '''
     function that gets json request to the url
     '''
-    get_article_url = base1.url.format(id,api_key)
+    get_article_url = article.url.format(id,api_key)
 
     with urllib.request.urlopen(get_article_url)as url:
         get_article_data=url.read()
