@@ -1,4 +1,4 @@
-# Password Locker
+# News Highlight
 #### News Highlight is a web application that helps busy people to catch up on the latest news, February 18th 2019
 
 #### By **NICOLE H.**
