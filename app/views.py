@@ -21,7 +21,8 @@ def article(id):
     '''
     View source page function that returns the article details page and its data
     '''
-    articles=get_article(id)
-
-    return render_template('article.html',article = article )
+    article=get_article(id)
+    print(article)
+    title= "Top HeadLines Articles"
+    return render_template('article.html',title=title,article = article )
 

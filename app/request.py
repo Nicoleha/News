@@ -64,38 +64,39 @@ def get_article(id):
         get_article_data=url.read()
         get_article_response=json.loads(get_article_data)
 
-        article_object= None
+        article_results= None
 
         if get_article_response['articles']:
             article_results_list = get_article_response['articles']
-            article_results = process_results(article_results_list)
+            article_results = receive_result(article_results_list)
 
     return article_results        
 
-    def process_result(article_list):
-        '''
-        Function  that processes the article result and transform them to a list of Objects
+def receive_result(article_list):
+    '''
+    Function  that processes the article result and transform them to a list of Objects
 
-        Args:
-        article_list: A list of dictionaries that contain article details
+    Args:
+    article_list: A list of dictionaries that contain article details
 
-        Returns :
-        article_results: A list of article objects
-        '''
+    Returns :
+    article_results: A list of article objects
+    '''
 
-        article_results=[]
-        for article in article_list:
-            author=article.get('author')
-            title=article.get('title')
-            description=article.get('description')
-            url=article.get('url')
-            urlToImage=article.get('urlToImage')
-            publishedAt=article.get('publishedAt')
-            content=article.get('content')
-            
-            if  title:
-                article_Object = Article(author,title,description,url,urlToImage,publishedAt,content)
-                article_results.append(article_Object)  
+    article_results=[]
+    for article in article_list:
+        id=article.get('id')
+        author=article.get('author')
+        title=article.get('title')
+        description=article.get('description')
+        url=article.get('url')
+        urlToImage=article.get('urlToImage')
+        publishedAt=article.get('publishedAt')
+        content=article.get('content')
+        
+        if author:
+            article_object = Article(id,author,title,description,url,urlToImage,publishedAt,content)
+            article_results.append(article_object)  
 
     return article_results 
 

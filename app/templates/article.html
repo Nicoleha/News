@@ -1,5 +1,7 @@
 
 {% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
 <!-- Content block -->
 {% block content %}
 
@@ -10,20 +12,20 @@
 <div class="container">
     <!-- Poster background -->
     <div class="row">
-        {% for article in articles %}
+        {% for item in article %}
 
-        <div class="col-md-6" style="background: url({{article.urlToImage}})">
+        <div class="col-md-6" style="background: url({{item.urlToImage}})">
         </div>
 
         <div class="col-md-6">
-            <p>{{ article.name }}</p>
-            <h3>{{ article.title }}</h3>
+            <p>{{ item.author}}</p>
+            <h3>{{ item.title }}</h3>
 
-            <p> {{ article.description }}</p>
-            <p>{{article.content}}</p>
-            <p>{{ article.author }}</p>
-            <p>{{article.publishedAt}}</p>
-            <a href={{article.url}} target="_blank">Read Full Article</a>
+            <p> {{ item.description }}</p>
+            <p>{{item.content}}</p>
+            <p>{{ item.author }}</p>
+            <p>{{item.publishedAt}}</p>
+            <a href={{item.url}} target="_blank">Read Full Article</a>
 
 
         </div>
